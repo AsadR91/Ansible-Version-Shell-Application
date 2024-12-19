@@ -1,6 +1,4 @@
-
 filebeat.inputs:
-
   - type: filestream
     id: {{ component }}
     enabled: true
