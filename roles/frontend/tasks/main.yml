@@ -30,6 +30,17 @@
     name: nginx
     enabled: true
 
+- name: Import Filebeat
+  ansible.builtin.import_role:
+    name: elk
+    tasks_from: filebeat
+
+
+
+
+
+
+
 #script=$(realpath "$0")
 #script_path=$(dirname "$script")
 #source ${script_path}/common.sh
