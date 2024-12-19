@@ -13,7 +13,7 @@
     src: filebeat.yml
     dest: /etc/filebeat/filebeat.yml
 
-- name: start Filebeat
+- name: Start Filebeat
   ansible.builtin.systemd:
     name: filebeat
     state: restarted
