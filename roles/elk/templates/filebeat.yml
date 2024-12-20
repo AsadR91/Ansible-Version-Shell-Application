@@ -15,7 +15,8 @@ filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
   reload.enabled: false
 # ================================= Processors =================================
-#processors:
-
+processors:
+  - drop fields:
+fields: ["agent.ephemeral_id", "agent.hostname", "agent.id", "agent.type", "agent.version", "ecs.version", "input.type", "log.offset", "version"]
 
 # ================================== Logging ===================================
