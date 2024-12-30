@@ -14,9 +14,11 @@ output.logstash:
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
   reload.enabled: false
+setup.template.settings:
+  index.number_of_shards: 1
 # ================================= Processors =================================
-#processors:
-#  - drop fields:
-#fields: ["agent.ephemeral_id", "agent.hostname", "agent.id", "agent.type", "agent.version", "ecs.version", "input.type", "log.offset", "version", "agent.name"]
+processors:
+  - drop fields:
+fields: ["agent.ephemeral_id", "agent.hostname", "agent.id", "agent.type", "agent.version", "ecs.version", "input.type", "log.offset", "version", "agent.name"]
 
 # ================================== Logging ===================================
