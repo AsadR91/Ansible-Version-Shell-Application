@@ -9,7 +9,7 @@ filebeat.inputs:
 
 # ------------------------------ Logstash Output -------------------------------
 output.logstash:
-  hosts: ["172.31.79.77:5044"]
+  hosts: ["172.31.79.81:5044"]
 
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
