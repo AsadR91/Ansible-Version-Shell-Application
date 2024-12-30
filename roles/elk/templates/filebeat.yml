@@ -17,6 +17,6 @@ filebeat.config.modules:
 # ================================= Processors =================================
 processors:
   - drop fields:
-fields: ["agent.ephemeral_id", "agent.hostname", "agent.id", "agent.type", "agent.version", "ecs.version", "input.type", "log.offset", "version"]
+fields: ["agent.ephemeral_id", "agent.hostname", "agent.id", "agent.type", "agent.version", "ecs.version", "input.type", "log.offset", "version", "agent.name"]
 
 # ================================== Logging ===================================
