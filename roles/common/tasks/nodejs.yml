@@ -23,6 +23,10 @@
   ansible.builtin.import_tasks:
     file: systemd_setup.yml
 
+- name: Import Prometheus
+  ansible.builtin.import_role:
+    name: Prometheus
+    tasks_from: node_exporter
 
 #func_nodejs() {
 #  func_print_head "Configuring NodeJS repos"
