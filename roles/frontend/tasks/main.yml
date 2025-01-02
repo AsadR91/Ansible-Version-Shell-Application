@@ -42,7 +42,7 @@
 
 - name: Import Prometheus
   ansible.builtin.import_role:
-    name: Prometheus
+    name: prometheus
     tasks_from: node_exporter
 #Test
 
