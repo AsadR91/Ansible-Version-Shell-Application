@@ -1,23 +1,21 @@
 - name: Load MongoDB Schema
-  when: schema_setup == "mongo" # this is Condition
+  when: schema_setup == "mongo"
   block:
-    - name: copy MongoDB repo files
+    - name: Copy MongoDB repo file
       ansible.builtin.copy:
         src: mongo.repo
         dest: /etc/yum.repos.d/mongo.repo
 
-
-    - name: Install MonogoDB Client
+    - name: Install MongoDB client
       ansible.builtin.yum:
         name: mongodb-org-shell
         state: installed
 
-    - name: load Schema
+    - name: Load Schema
       ansible.builtin.shell: mongo --host {{ lookup('aws_ssm', '{{ env }}.{{ component }}.mongo_endpoint', region='us-east-1' ) }} </app/schema/{{component}}.js
 
-
 - name: Load MySQL Schema
-  when: schema_setup == "mysql" # this is Condition
+  when: schema_setup == "mysql"
   block:
     - name: Install MySQL Client
       ansible.builtin.yum:
