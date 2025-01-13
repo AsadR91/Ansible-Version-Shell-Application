@@ -4,9 +4,9 @@ labels:
   - { tag: component, label: component }
 
 components:
-  - { name: cart, Service_name: cart }
-  - { name: catalogue, Service_name: catalogue }
-  - { name: user, Service_name: user }
-  - { name: shipping, Service_name: shipping }
-  - { name: payment, Service_name: payment }
-  - { name: frontend, Service_name: nginx }
+  - { name: cart, service_name: cart }
+  - { name: catalogue, service_name: catalogue }
+  - { name: user, service_name: user }
+  - { name: shipping, service_name: shipping }
+  - { name: payment, service_name: payment }
+  - { name: frontend, service_name: nginx }
